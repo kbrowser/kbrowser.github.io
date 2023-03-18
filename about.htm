@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>About - kScenes</title>
+    <link rel="stylesheet" type="text/css" href="theme.css" />
+  </head>
+  <body>
+    <div class="title">
+      <img src="logo.png" />
+      kScenes
+    </div>
+    <div class="menu">
+      <li><a href="index.htm">Home</a></li>
+      <li><a href="versions.htm">Versions</a></li>
+      <li><a href="license.htm">License</a></li>
+      <li>About</li>
+      <li><a href="memory.htm">Memory</a></li>
+    </div>
+    <div class="page">
+      <p>About the project name "kScenes", the “k” is the first letter of my childhood nickname.</p>
+      <p>Every day it is a very happy thing to add a feature, fix a bug or improve a function. In the past months, I have made great progress on Python programming. I am an introverted person. I am not good at mathematics. My hobbies are literature and history. I'd like to tell people, if you wish to do something, you can do it.</p>
+      <p>For a long time, I cannot find a perfect solution for viewing and managing images. digiKam is great, but it is not a good experience when indexing a large number of images. And it is too big. I can't utilize most of its functions, and I hope to find a lightweight solution. Since using Python, why not write a viewer? Then the project was started.</p>
+      <p>Python does not have a native module to handle images. The app used tkinter originally, but tkinter only supports PNG and GIF. So I have to find a solution to support other formats. I prefer using native modules of Python, and let a separate command-line program take the place of a third-party module. Then I choose ImageMagick, a powerful tool for handling images in many formats including HEIC.</p>
+      <p>ImageMagick can output high-quality images, but it is not very efficient. If cache files are in PNG format, cache size will be very large. Therefore, I must find a solution that can open JPEG images directly. I chose Pillow at the first. But later I found that tkinter had a bug. If the app opened a large number of images, it would crash. Then I decided to redesign my app using Qt. PySide6 is Qt for Python, and it supports JPEG format. It is more efficient and stable than tkinter, and it can take the place of Pillow. Now the architecture of kScenes is that Qt shows interface, Python runs program logic, and ImageMagick converts images.</p>
+    </div>
+  </body>
+</html>
